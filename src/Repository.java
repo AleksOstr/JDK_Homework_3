@@ -1,2 +1,9 @@
-package PACKAGE_NAME;public interface Repository {
+public interface Repository<T> {
+    void add(T item);
+
+    void update(T oldItem, T newItem);
+
+    void delete(T item);
+
+    T getById(int id);
 }
